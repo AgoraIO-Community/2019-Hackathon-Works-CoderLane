@@ -1,7 +1,7 @@
 *English|[中文](README.ZH.md)*
 ## Coderlane
 
-Coderlane is an online real-time programming environment, a high-fidelity REPL environment. It also supports multi-person programming,Voice and Video (thanks to [Agora](http://agora.io)for the service)
+Coderlane is an online real-time programming environment, a high-fidelity REPL environment. It also supports multi-person programming,Voice and Video (Thanks to [Agora](http://agora.io) for the service)
 
 ## Screenshot
 
