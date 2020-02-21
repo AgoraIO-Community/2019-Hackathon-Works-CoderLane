@@ -1,0 +1,266 @@
+@import './normalize';
+@import './Variables';
+@import '~xterm/dist/xterm.css';
+@import '~react-notifications-component/dist/theme.css';
+
+body {
+  background-color: $black-main;
+  overflow: hidden;
+}
+.notification-success {
+  background-color: black;
+  border-left: 4px solid #47b881;
+}
+
+// 共用样式
+.icon {
+  vertical-align: -0.125em;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.justify-content-around {
+  justify-content: space-around !important;
+}
+
+.align-items-start {
+  align-items: flex-start !important;
+}
+
+.align-items-end {
+  align-items: flex-end !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.align-items-baseline {
+  align-items: baseline !important;
+}
+
+.align-items-stretch {
+  align-items: stretch !important;
+}
+
+.align-content-start {
+  align-content: flex-start !important;
+}
+
+.align-content-end {
+  align-content: flex-end !important;
+}
+
+.align-content-center {
+  align-content: center !important;
+}
+
+.align-content-between {
+  align-content: space-between !important;
+}
+
+.align-content-around {
+  align-content: space-around !important;
+}
+
+.align-content-stretch {
+  align-content: stretch !important;
+}
+
+.align-self-auto {
+  align-self: auto !important;
+}
+
+.align-self-start {
+  align-self: flex-start !important;
+}
+
+.align-self-end {
+  align-self: flex-end !important;
+}
+
+.align-self-center {
+  align-self: center !important;
+}
+
+.align-self-baseline {
+  align-self: baseline !important;
+}
+
+.align-self-stretch {
+  align-self: stretch !important;
+}
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.position-static {
+  position: static !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.position-sticky {
+  position: sticky !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem
+}
+
+::-webkit-scrollbar-thumb {
+  transition: all .3s ease;
+  border-color: transparent;
+  background-color: hsla(0, 0%, 100%, .1);
+  z-index: 40
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transition: all .3s ease;
+  background-color: hsla(0, 0%, 100%, .15)
+}
+
+// Split Panel
+.SplitPane {
+  height: calc(100vh - 63px) !important;
+  background-color: $black;
+}
+.Resizer {
+  background: #000;
+  opacity: .2;
+  z-index: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.Resizer:hover {
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.Resizer.horizontal {
+  height: 11px;
+  margin: -5px 0;
+  border-top: 5px solid rgba(255, 255, 255, 0);
+  border-bottom: 5px solid rgba(255, 255, 255, 0);
+  cursor: row-resize;
+  width: 100%;
+}
+
+.Resizer.horizontal:hover {
+  border-top: 5px solid rgba(0, 0, 0, 0.8);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.8);
+}
+
+.Resizer.vertical {
+  width: 11px;
+  margin: 0 -5px;
+  border-left: 5px solid rgba(255, 255, 255, 0);
+  border-right: 5px solid rgba(255, 255, 255, 0);
+  cursor: col-resize;
+}
+
+.Resizer.vertical:hover {
+  border-left: 5px solid rgba(0, 0, 0, 0.8);
+  border-right: 5px solid rgba(0, 0, 0, 0.8);
+}
+.Resizer.disabled {
+  cursor: not-allowed;
+}
+.Resizer.disabled:hover {
+  border-color: transparent;
+}
+
+// react-modal
+.ReactModal__Content {
+  transition: all 300ms ease;
+  transition-property: opacity, transform;
+  opacity: 0;
+  transform: scale(0.9) translateY(5px);
+
+  h2 {
+    margin-top: 14px;
+  }
+}
+
+.ReactModal__Overlay {
+  transition: all 300ms ease;
+  transition-property: opacity, transform;
+  z-index: 10;
+  opacity: 0;
+}
+
+.ReactModal__Overlay--after-open {
+  transition: all 300ms ease;
+  z-index: 10;
+  opacity: 1;
+}
+
+.ReactModal__Html--open {
+  overflow-y: hidden;
+}
+
+.ReactModal__Content--after-open {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content--before-close {
+  opacity: 0;
+  transform: scale(0.9) translateY(0);
+}
+
+// monaco-editor
+.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input {
+  background-color: $black-main !important;
+}
+.monaco-editor .margin {
+  background-color: $black-main !important;
+}

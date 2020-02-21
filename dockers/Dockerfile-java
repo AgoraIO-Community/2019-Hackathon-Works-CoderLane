@@ -1,0 +1,7 @@
+FROM openjdk:8
+
+RUN curl --create-dir -o /root/package/guava.jar -L http://search.maven.org/remotecontent?filepath=com/google/guava/guava/23.0/guava-23.0.jar
+RUN curl --create-dir -o /root/package/gson.jar -L https://search.maven.org/remotecontent?filepath=com/google/code/gson/gson/2.8.5/gson-2.8.5.jar
+
+
+CMD script -q -c 'javac -classpath /root/package/* Main.java 2>&1 && java -classpath /root/package/*:. Main 2>&1' coderlane.log

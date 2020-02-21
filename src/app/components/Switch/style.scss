@@ -1,0 +1,41 @@
+.switch {
+  transition: 0.3s ease all;
+  position: relative;
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 56px;
+  height: 26px;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5em;
+    line-height: 1;
+  }
+
+  &.small {
+    width: 48px;
+    height: 20px;
+
+    .switch__dot {
+      height: 14px;
+    }
+  }
+  &__dot {
+    transition: inherit;
+    position: absolute;
+    width: 16px;
+    left: 2px;
+    border-radius: 4px;
+    top: 2px;
+    background-color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    height: 20px;
+    transform: translateX(0px);
+  }
+}

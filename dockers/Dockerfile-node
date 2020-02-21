@@ -1,0 +1,14 @@
+FROM node:10.15
+
+RUN npm i -g mocha --registry=https://registry.npm.taobao.org
+RUN npm i lodash request moment ramda underscore chai jsdom bluebird q --registry=https://registry.npm.taobao.org
+
+# RUN useradd -ms /bin/bash coderlane
+
+# USER coderlane
+
+# WORKDIR /home/coderlane/workspace
+
+# COPY repl/node/repl.js /home/coderlane/repl.js
+
+# CMD bash -c "if [ $runType == 'execute' ]; then script -q -c 'node Main.js 2>&1' coderlane.log; elif [ $runType == 'code' ]; then node -e 'require(\"repl\").start({ignoreUndefined: true})'; fi"

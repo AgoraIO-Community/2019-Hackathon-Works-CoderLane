@@ -1,0 +1,54 @@
+@import '../Variables';
+
+.snippet {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+
+  h3 {
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 2rem;
+  }
+  &__container {
+    display: grid;
+    gap: 1rem 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  &__item {
+    color: white;
+    padding: 16px;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    background-color: $black-main;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    div:first-child {
+      margin-right: 10px;
+    }
+    div:last-child {
+      text-transform: capitalize
+    }
+    &.node {
+      &:hover {
+        background-color: rgba(102, 204, 51, 0.4);
+      }
+    }
+    &.ruby {
+      &:hover {
+        background-color: rgba(179, 19, 1, 0.4);
+      }
+    }
+    &.go {
+      &:hover {
+        background-color: rgba(106, 215, 229, 0.4);
+      }
+    }
+  }
+
+}

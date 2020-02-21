@@ -1,0 +1,12 @@
+FROM mysql:5.7
+
+#设置免密登录
+ENV MYSQL_ALLOW_EMPTY_PASSWORD yes
+
+#将所需文件放到容器中
+# COPY setup-mysql.sh /mysql/setup.sh
+COPY schema-mysql.sql /docker-entrypoint-initdb.d/schema-mysql.sql
+
+# CMD sh /mysql/setup.sh && bash
+
+# CMD sh /mysql/setup.sh && bash -c "if [ $runType == 'execute' ]; then script -q -c 'mysql -s --table -D coderlane < ./Main.sql 2>&1' coderlane.log; elif [ $runType == 'code' ]; then mysql -s --table -D coderlane; fi"

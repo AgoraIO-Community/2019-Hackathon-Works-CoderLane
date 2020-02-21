@@ -1,0 +1,42 @@
+@import '../Variables';
+
+.workspace {
+  width: 100%;
+  height: 100%;
+  background-color: $black-main;
+
+  &__topbar {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: $black-main;
+    height: 36px;
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 16px;
+    .icon {
+      font-size: 16px;
+      margin-right: 6px;
+    }
+    .ball {
+      transition: all 500ms ease;
+      color: $main;
+      border-radius: 100%;
+      font-size: 8px;
+      animation: flash 2s infinite ease;
+
+      &.disconnect {
+        color: red;
+      }
+    }
+  }
+}
+@keyframes flash {
+  0% {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

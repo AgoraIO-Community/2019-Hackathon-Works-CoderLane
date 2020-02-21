@@ -1,0 +1,35 @@
+@import '../Variables';
+
+.print {
+  width: 100%;
+  height: 100%;
+  background-color: $black-main;
+  position: relative;
+
+  &__wrap {
+    height: calc(100% - 36px);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: $black-main;
+  }
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: $main;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  svg {
+    animation: loadingCircle 1s infinite linear;
+  }
+}
+@keyframes loadingCircle {
+  100% {
+    transform: rotate(360deg);
+  }
+}

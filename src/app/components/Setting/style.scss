@@ -1,0 +1,28 @@
+.setting {
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.8);
+
+  h3 {
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 2rem;
+  }
+
+  &__subDescription {
+    margin-top: 0.25rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+  }
+  &__split {
+    border: none;
+    height: 1px;
+    outline: none;
+    margin: 1rem 0;
+
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &__number {
+    text-align: center;
+  }
+}

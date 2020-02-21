@@ -1,0 +1,44 @@
+@import '../Variables';
+
+.usermenu {
+  z-index: 1000;
+  &__container {
+    position: absolute;
+    opacity: 0;
+    top: 42px;
+    right: 0px;
+    min-width: 200px;
+    z-index: 10;
+    animation: 0.3s ease 0s 1 normal forwards running amination_usermenu;
+    background-color: $black-main;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.75);
+  }
+  &__item {
+    display: flex;
+    align-content: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    border-left: 2px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $main;
+      color: white;
+      background-color: adjust-color($main, $alpha: -0.8);
+    }
+  }
+  &__separator {
+    height: 1px;
+    width: 100%;
+    margin: 0.5rem 0;
+    background-color: #24282a;
+    border: 0;
+    outline: 0;
+  }
+}
+
+@keyframes amination_usermenu {
+  0%   { opacity: 0; transform: translateY(0px); }
+  100% { opacity: 1; transform: translateY(10px); }
+}

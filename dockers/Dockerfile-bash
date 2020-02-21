@@ -1,0 +1,7 @@
+FROM ubuntu:18.04
+
+# RUN useradd -ms /bin/bash coderlane
+# USER coderlane
+# WORKDIR /home/coderlane/workspace
+
+CMD bash -c "if [ $runType == 'execute' ]; then script -q -c 'bash Main.sh 2>&1' coderlane.log; elif [ $runType == 'code' ]; then bash; fi"

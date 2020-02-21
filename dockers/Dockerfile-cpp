@@ -1,0 +1,9 @@
+FROM gcc:8.3
+
+# RUN useradd -ms /bin/bash coderlane
+
+# USER coderlane
+
+# WORKDIR /home/coderlane/workspace
+
+CMD script -q -c 'g++ Main.cpp -o Main -O2 -std=c++17 -lcurl 2>&1 && ./Main 2>&1' coderlane.log

@@ -1,0 +1,13 @@
+FROM python:3.7.3
+
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple/ numpy scipy pandas requests beautifulsoup4 ipython
+
+# RUN useradd -ms /bin/bash coderlane
+
+# USER coderlane
+
+# WORKDIR /home/coderlane/workspace
+
+RUN ipython profile create
+
+CMD bash -c "if [ $runType == 'execute' ]; then script -q -c 'python3 Main.py 2>&1' coderlane.log; elif [ $runType == 'code' ]; then python3; fi"

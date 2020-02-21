@@ -1,0 +1,9 @@
+FROM golang:1.11.9
+
+# RUN useradd -ms /bin/bash coderlane
+
+# USER coderlane
+
+# WORKDIR /home/coderlane/workspaces
+
+CMD script -q -c 'go run Main.go 2>&1' coderlane.log
