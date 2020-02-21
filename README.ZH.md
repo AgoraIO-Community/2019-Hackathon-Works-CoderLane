@@ -1,4 +1,4 @@
-*中文|[English](README.zh.md)*
+*中文|[English](README.md)*
 ## Coderlane
 
 Coderlane是一款在线实时编程环境, 高保真的REPL环境. 同时支持多人编程，语音和视频(感谢[Agora](http://agora.io)提供的服务)
