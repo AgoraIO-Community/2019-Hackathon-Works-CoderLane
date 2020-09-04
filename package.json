@@ -98,7 +98,7 @@
     "eslint-plugin-react": "^7.14.2",
     "ignore-loader": "^0.1.2",
     "mini-css-extract-plugin": "^0.7.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.19.1",
     "postcss-loader": "^3.0.0",
     "redux-devtools-extension": "^2.13.8",
